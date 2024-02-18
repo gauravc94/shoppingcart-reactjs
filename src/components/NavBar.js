@@ -1,35 +1,35 @@
 import React from 'react'
 
 // NavBar component for the app
-export default function NavBar() {
+export default function NavBar({ count }) {
     return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container px-4 px-lg-5">
             {/* Brand */}
-            <a class="navbar-brand" href="#!">Start Bootstrap</a>
+            <a className="navbar-brand" href="#!">Start Bootstrap</a>
             {/* Toggler button for responsive design */}
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
             {/* Navigation links */}
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li className="nav-item"><a className="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#!">About</a></li>
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="#!">All Products</a></li>
+                            <li><hr className="dropdown-divider" /></li>
+                            <li><a className="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a className="dropdown-item" href="#!">New Arrivals</a></li>
                         </ul>
                     </li>
                 </ul>
                 {/* Cart button with count */}
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
+                <form className="d-flex">
+                    <button className="btn btn-outline-dark" type="submit">
+                        <i className="bi-cart-fill me-1"></i>
                         Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span className="badge bg-dark text-white ms-1 rounded-pill">{ count }</span>
                     </button>
                 </form>
             </div>
